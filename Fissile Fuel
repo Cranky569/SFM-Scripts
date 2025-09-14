@@ -1,0 +1,144 @@
+name "Fissile Fuel"
+
+-- Energy Distribution
+Every 1 ticks do
+    input fe:: from cube south side
+    output fe:: to power each side
+end
+-- Water Distributions
+Every 20 ticks do
+    Input fluid::water From water
+    Output fluid::water to watervapor north side
+end
+
+Every 20 ticks do
+    Input fluid::water From water
+    Output fluid::water to plutoniumpellet east side
+end
+
+Every 20 ticks do
+    Input fluid::water From water
+    Output fluid::water to oxygen north side
+end
+
+Every 20 ticks do
+    Input fluid::water From water
+    Output fluid::water to "substrate-ethene" east side
+end
+
+-- Sulfur Dioxide
+Every 20 ticks do
+    input from sulfur
+    Output to sulfurdioxide north side
+end
+
+Every 20 ticks do
+    Input gas::oxygen From oxygen north side
+    Output gas::oxygen to sulfurtrioxide north side
+end
+
+Every 20 ticks do
+    Input gas::sulfur_dioxide From sulfurdioxide north side
+    Output gas::sulfur_dioxide to sulfurtrioxide bottom side
+end
+
+Every 20 ticks do
+    Input gas::sulfur_trioxide From sulfurtrioxide west side
+    Output gas::sulfur_trioxide to sulfuricacid north side
+end
+
+Every 20 ticks do
+    Input gas::water_vapor From watervapor north side
+    Output gas::water_vapor to sulfuricacid bottom side
+end
+
+Every 20 ticks do
+    Input from fluorit
+    output to hydrofluoridacid north side
+end
+
+Every 20 ticks do
+    input gas::sulfuric_acid from sulfuricacid east side
+    output gas::sulfuric_acid to hydrofluoridacid north side
+end
+
+Every 20 ticks do
+    input gas::hydrofluoric_acid from hydrofluoridacid north side
+    output gas::hydrofluoric_acid to uraniumhexafluoride north side
+end
+
+Every 20 ticks do
+    input gas::uranium_oxide from uraniumoxide north side
+    output gas::uranium_oxide to uraniumhexafluoride bottom side
+end
+
+Every 20 ticks do
+    input from uraningot
+    output to yellowcakeuranium north side
+end
+
+Every 20 ticks do
+    input from yellowcakeuranium north side
+    output to uraniumoxide north side
+end
+
+-- Fissile Fuel
+Every 20 ticks do
+    input gas::uranium_hexafluoride from uraniumhexafluoride east side
+    output gas::uranium_hexafluoride to fissilefuel north side
+end
+
+-- HDPE Sheet
+
+-- biofuel
+Every 20 ticks do
+    input from farm
+    output to buffer
+end
+Every 20 ticks do
+    input potato from buffer
+    output potato to biofuel east side
+end
+-- substrate
+Every 20 ticks do
+    input from biofuel east side
+    output to "substrate-ethene" east side
+end
+
+Every 20 ticks do
+    Input gas::hydrogen From oxygen top side
+    Output gas::hydrogen to "substrate-ethene" bottom side
+end
+-- HDPE Pellet
+Every 20 ticks do
+    input gas::ethene from "substrate-ethene" bottom side
+    output gas::ethene to liquidethene east side
+end
+Every 20 ticks do
+    input from "substrate-ethene" bottom side
+    output to hdpepellet bottom side
+end
+Every 20 ticks do
+    Input gas::oxygen From oxygen north side
+    Output gas::oxygen to hdpepellet east side
+end
+Every 20 ticks do
+    input fluid::ethene from liquidethene east side
+    output fluid::ethene to hdpepellet east side
+end
+-- HDPE Sheet
+Every 20 ticks do
+    input from hdpepellet east side
+    output to hdpesheet east side
+end
+Every 20 ticks do
+    input from hdpesheet east side
+    output to "output"
+end
+
+--
+
+Every 20 ticks do
+    input from plutoniumpellet south side
+    output to "output"
+end
