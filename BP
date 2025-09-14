@@ -1,0 +1,14 @@
+{
+  "name": "Mekanism Startup",
+  "statePosArrayList": "{blockstatemap:[{Name:\"sfm:cable\"},{Name:\"mekanism:basic_energy_cube\",Properties:{facing:\"up\",fluid_logged:\"empty\"}},{Name:\"functionalstorage:oak_1\",Properties:{facing:\"down\",locked:\"false\",subfacing:\"south\"}},{Name:\"minecraft:air\"},{Name:\"fluxnetworks:flux_point\",Properties:{down:\"true\",east:\"false\",north:\"false\",south:\"false\",up:\"false\",waterlogged:\"false\",west:\"false\"}},{Name:\"mekanism:crusher\",Properties:{active:\"false\",facing:\"south\"}},{Name:\"mekanism:metallurgic_infuser\",Properties:{active:\"false\",facing:\"south\",fluid_logged:\"empty\"}},{Name:\"sfm:manager\",Properties:{triggered:\"false\"}},{Name:\"mekanism:metallurgic_infuser\",Properties:{active:\"false\",facing:\"west\",fluid_logged:\"empty\"}},{Name:\"functionalstorage:oak_1\",Properties:{facing:\"down\",locked:\"false\",subfacing:\"west\"}},{Name:\"minecraft:scaffolding\",Properties:{bottom:\"false\",distance:\"0\",waterlogged:\"false\"}}],endpos:{X:6,Y:1,Z:0},startpos:{X:0,Y:0,Z:-9},statelist:[I;0,0,0,0,0,0,1,2,2,2,2,2,3,4,5,5,6,3,3,7,0,3,3,3,3,3,3,3,3,3,3,3,3,3,0,3,3,3,3,3,3,3,3,3,3,3,3,8,0,3,3,3,3,3,3,9,3,3,3,3,3,8,0,3,3,3,3,3,3,9,3,3,3,3,3,8,0,3,3,3,3,3,3,9,3,3,3,3,3,8,0,3,3,3,3,3,3,9,3,3,3,3,3,8,0,3,3,3,3,3,3,9,3,3,3,3,3,8,0,3,3,3,3,3,3,9,10,3,3,3,3,8,0,3,3,3,3,3,3,9]}",
+  "requiredItems": {
+    "fluxnetworks:Reference{ResourceKey[minecraft:item / fluxnetworks:flux_point]\u003dfluxnetworks:flux_point}": 1,
+    "sfm:Reference{ResourceKey[minecraft:item / sfm:manager]\u003dsfm:manager}": 1,
+    "mekanism:Reference{ResourceKey[minecraft:item / mekanism:crusher]\u003dmekanism:crusher}": 2,
+    "minecraft:Reference{ResourceKey[minecraft:item / minecraft:scaffolding]\u003dminecraft:scaffolding}": 1,
+    "functionalstorage:Reference{ResourceKey[minecraft:item / functionalstorage:oak_1]\u003dfunctionalstorage:oak_1}": 12,
+    "mekanism:Reference{ResourceKey[minecraft:item / mekanism:basic_energy_cube]\u003dmekanism:basic_energy_cube}": 1,
+    "mekanism:Reference{ResourceKey[minecraft:item / mekanism:metallurgic_infuser]\u003dmekanism:metallurgic_infuser}": 8,
+    "sfm:Reference{ResourceKey[minecraft:item / sfm:cable]\u003dsfm:cable}": 15
+  }
+}
